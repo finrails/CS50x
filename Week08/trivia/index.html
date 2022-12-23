@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            const firstAlert = document.createElement('div')
+            const secondAlert = document.createElement('div')
+
+            const correctAnwser = '9'
+            const secondAnswer = 'Felis catus'
+
+            const clearButtons = buttons => {
+                for(let button of buttons) {
+                    button.style.backgroundColor = '#d9edff'
+                }
+            }
+
+            const hookButton = (button) => {
+                if (button.tagName != 'BUTTON') {
+                    return false
+                }
+
+                return button
+            }
+
+            const setAlert = (element, button, anwser, correctAnwser) => {
+                if (anwser == correctAnwser) {
+                    button.style.backgroundColor = 'green'
+                    element.innerHTML = 'Correct'
+                    return true
+                }
+
+                button.style.backgroundColor = 'red'
+                element.innerHTML = 'Incorrect'
+                return false
+            }
+
+            const checkEngine = (clickedElement) => {
+
+                const section = document.querySelector('.section')
+                const allButtons = document.querySelector('#answers').children
+                const button = hookButton(clickedElement)
+
+                clearButtons(allButtons)
+                setAlert(firstAlert, button, button.innerHTML, correctAnwser)
+
+            }
+
+            const checkInputEngine = input => {
+                console.log(input)
+                awnser = input.value
+                setAlert(secondAlert, input, awnser, secondAnswer)
+            }
+
+            const setButtonsListener = () => {
+                buttons = document.querySelector('#answers')
+                sections = document.querySelectorAll('.section')
+                inputButton = document.querySelector('#catus')
+
+                sections[0].insertBefore(firstAlert, sections[0].children[3])
+                sections[1].insertBefore(secondAlert, sections[1].children[3])
+                input = document.querySelector('input[name="answer"]')
+
+                buttons.addEventListener('click', event => checkEngine(event.target))
+                inputButton.addEventListener('click', event => checkInputEngine(input))
+             }
+        </script>
+    </head>
+    <body onload="setButtonsListener()">
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>3 x 3 = ?</h3>
+                <div id="answers">
+                    <button class="fancy">6</button>
+                    <button class="fancy">3</button>
+                    <button class="fancy">9</button>
+                </div>
+                <!-- TODO: Add multiple choice question here -->
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the scientific name of 'cat'?</h3>
+                <input type="text" name="answer" >
+                <button id="catus">Ok!</button>
+            </div>
+        </div>
+    </body>
+</html>
+
