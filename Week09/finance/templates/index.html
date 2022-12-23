@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            </tr>
+                <th>My Cash:</th>
+                <th>{{ cash|usd }}</th>
+            </tr>
+            <tr>
+                <th>Symbol</th>
+                <th>Company</th>
+                <th>Shares</th>
+                <th>Stack ({{ all_stocks_sum|usd }})</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+                {% if order['sum_shares'] > 0 %}
+                    <tr>
+                        <td>{{ order['symbol'] }}</td>
+                        <td>{{ order['company'] }}</td>
+                        <td>{{ order['sum_shares'] }}</td>
+                        <td>{{ stocks_current_prices[loop.index0]|usd }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

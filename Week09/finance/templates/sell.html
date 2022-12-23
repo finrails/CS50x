@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <div class="field mb-3">
+            <select name="symbol" class="form-select mx-auto" style="min-width: 260px; width: 19%;">
+                <option selected disabled>Select</option>
+                {% for current in symbols_buffer %}
+                    <option value="{{current}}">{{current}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="field mb-3">
+            <input type="text" name="shares" class="form-control mx-auto w-auto" placeholder="Shares">
+        </div>
+        <button class="btn btn-primary px-5" type="submit">Submit</button>
+    </form>
+{% endblock %}

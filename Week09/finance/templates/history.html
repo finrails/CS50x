@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Action</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Date</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in history %}
+                <tr>
+                    <td>{{ order['company'] }}</td>
+                    {% if order['shares'] > 0 %}
+                        <td style="color: red;">BUY</td>
+                    {% else %}
+                        <td style="color: green;">SELL</td>
+                    {% endif %}
+                    <td>{{ order['shares'] }}</td>
+                    <td>{{ order['share_price'] }}</td>
+                    <td>{{ order['buy_date'] }}</td>
+                    <td>{{ order['symbol'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

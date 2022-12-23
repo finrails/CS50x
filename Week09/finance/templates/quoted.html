@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <table class="table w-75 mx-auto">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ fetch_result['name'] }}</td>
+                <td>{{ fetch_result['price'] }}</td>
+                <td>{{ fetch_result['symbol'] }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
