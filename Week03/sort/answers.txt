@@ -1,0 +1,12 @@
+sort1 uses: bubble sort
+
+How do you know?: I know that because when i use a random list, it's get sorted in O(n²) steps, so it's slow. But when i use a already sorted list, it's get sorted so much faster, it means that at the best case scenario the algorithm takes Ω(n) to sort the list.
+
+sort2 uses: merge sort
+
+How do you know?: Because the algorithm is much faster that the first one. And the sort time is the same at the best and worst cases scenarios. so it's a Θ(n log n), and no matter how much input it takes, it still sorts the list really fast.
+
+sort3 uses: selection sort.
+
+How do you know?: Because the algorithm is really slow, and it's O(n²) and Ω(n²), so the best case scenario is irrelevant, the algorithm's still taking n² steps to solve the best case scenario. So it's Θ(n²) the worst possible thing(in this context).
+
