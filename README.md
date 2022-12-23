@@ -1,4 +1,4 @@
-# CS50x-2021
+# CS50x-2022
 Enroll here: [CS50x](https://cs50.harvard.edu/x/)\
 Instructor: [David J. Malan](https://cs.harvard.edu/malan/)\
 
@@ -9,10 +9,9 @@ Instructor: [David J. Malan](https://cs.harvard.edu/malan/)\
 - ⛳[Week 1](Week01/) ```[Theme: Basics of C, Greedy Algorithm, Cryptography]```
   - Lab
     - [Hello](Week01/hello)
-    - [Population](Week01/population)
   - Problem set
-    - [Mario](Week01/mario)
-      - [More comfortable](Week01/mario-less)
+    - [Mario](Week01/mario-less)
+      - [Less comfortable](Week01/mario-less)
     - [Cash](Week01/cash)
  
  - ⛳[Week 2](Week02/) ```[Theme: Arrays, Cryptography, Encryption]```
@@ -33,7 +32,7 @@ Instructor: [David J. Malan](https://cs.harvard.edu/malan/)\
     - Lab
       - [Volume](Week04/volume)
     - Problem set
-      - [Filter]💥
+      - [Filter](Week04/filter-more)💥
         - [More comfortable](Week04/filter-more)
       - [Recover](Week04/recover)
  
@@ -45,7 +44,7 @@ Instructor: [David J. Malan](https://cs.harvard.edu/malan/)\
 
 - ⛳[Week 6](Week06/) ```[Theme: Basics of Python, Forensics, Probability]```
   - Lab
-    - [World Cup](Week06/worldcup)
+    - [World Cup](Week06/world-cup)
   - Problem set
     - [Hello](Week06/sentimental-hello)
     - [Mario](Week06/sentimental-mario-more)
